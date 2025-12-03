@@ -368,3 +368,4 @@ author = {D.C Dowson and B.V Landau},
 keywords = {Fréchet distance, multivariate normal distributions, covariance matrices},
 abstract = {The Fréchet distance between two multivariate normal distributions having means μX, μY and covariance matrices ΣX, ΣY is shown to be given by d2 = |μX − μY|2 + tr(ΣX + ΣY − 2(ΣXΣY)12). The quantity d0 given by d02 = tr(ΣX + ΣY − 2(ΣXΣY)12) is a natural metric on the space of real covariance matrices of given order.}
 }
+'''
