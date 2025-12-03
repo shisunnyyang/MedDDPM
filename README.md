@@ -31,6 +31,7 @@ MRI images should be stored in:
 ```
 /content/drive/MyDrive/ColabNotebooks/EnhanceMRIdata/brain
 ```
+You may change it to your own directory.
 
 You may:
 
@@ -60,6 +61,9 @@ Dummy binary masks are generated and stored in:
 ```
 /content/drive/MyDrive/ColabNotebooks/EnhanceMRIdata/masks
 ```
+
+You may change it to your own directory.
+
 These masks:
 
 - Match the size `IMG_SIZE` (e.g., 128 × 128)  
