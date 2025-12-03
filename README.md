@@ -139,3 +139,231 @@ diffusion.load_state_dict(torch.load('diffusion_model.pth'))
 - Attention-augmented U-Nets  
 - Training with larger datasets  
 
+Reference:
+@misc{ddpmgithub,
+    key = {Denoising Diffusion Probabilistic Model, in Pytorch},
+    url = {https://github.com/lucidrains/denoising-diffusion-pytorch/tree/main},
+    author ={lucidrains}
+}
+
+@misc{kazerouni2023diffusionmodelsmedicalimage,
+      title={Diffusion Models for Medical Image Analysis: A Comprehensive Survey}, 
+      author={Amirhossein Kazerouni and Ehsan Khodapanah Aghdam and Moein Heidari and Reza Azad and Mohsen Fayyaz and Ilker Hacihaliloglu and Dorit Merhof},
+      year={2023},
+      eprint={2211.07804},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url={https://arxiv.org/abs/2211.07804}, 
+}
+
+@misc{vivekananthan2024comparativeanalysisgenerativemodels,
+      title={Comparative Analysis of Generative Models: Enhancing Image Synthesis with VAEs, GANs, and Stable Diffusion}, 
+      author={Sanchayan Vivekananthan},
+      year={2024},
+      eprint={2408.08751},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2408.08751}, 
+}
+
+@misc{ho2020denoisingdiffusionprobabilisticmodels,
+      title={Denoising Diffusion Probabilistic Models}, 
+      author={Jonathan Ho and Ajay Jain and Pieter Abbeel},
+      year={2020},
+      eprint={2006.11239},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2006.11239}, 
+}
+
+@misc{xiao2022tacklinggenerativelearningtrilemma,
+      title={Tackling the Generative Learning Trilemma with Denoising Diffusion GANs}, 
+      author={Zhisheng Xiao and Karsten Kreis and Arash Vahdat},
+      year={2022},
+      eprint={2112.07804},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2112.07804}, 
+}
+
+@misc{hu2022unsuperviseddenoisingretinaloct,
+      title={Unsupervised Denoising of Retinal OCT with Diffusion Probabilistic Model}, 
+      author={Dewei Hu and Yuankai K. Tao and Ipek Oguz},
+      year={2022},
+      eprint={2201.11760},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2201.11760}, 
+}
+
+@misc{yu2025petimagedenoisingtextguided,
+      title={PET Image Denoising via Text-Guided Diffusion: Integrating Anatomical Priors through Text Prompts}, 
+      author={Boxiao Yu and Savas Ozdemir and Jiong Wu and Yizhou Chen and Ruogu Fang and Kuangyu Shi and Kuang Gong},
+      year={2025},
+      eprint={2502.21260},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url={https://arxiv.org/abs/2502.21260}, 
+}
+
+@misc{brainmriimagesdataset,
+    title ={Brain MRI Images},
+    url = {https://www.kaggle.com/datasets/ashfakyeafi/brain-mri-images/data},
+    author = {Ashfak Yeaki},
+    year = {2023}
+}
+
+@misc{brainmrisegmentation,
+    title = {Brain MRI segmentation},
+    author ={Mateusz Buda},
+    year = {2018},
+    url = {https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation}
+}
+
+@misc{chung2022scorebaseddiffusionmodelsaccelerated,
+      title={Score-based diffusion models for accelerated MRI}, 
+      author={Hyungjin Chung and Jong Chul Ye},
+      year={2022},
+      eprint={2110.05243},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url={https://arxiv.org/abs/2110.05243}, 
+}
+
+@misc{fastmri,
+    url = {https://fastmri.med.nyu.edu/},
+    title = {Welcome to the fastMRI Dataset},
+    author = {NYU Langone Health}
+}
+
+@misc{brats2020,
+    url = {https://www.kaggle.com/datasets/awsaf49/brats2020-training-data},
+    title = {Brain Tumor Segmentation (BraTS2020)},
+    author = {AWSAF}
+}
+
+@misc{stanformri,
+    url = {https://aimi.stanford.edu/shared-datasets},
+    author = {Center for Artificial Intelligence in Medicine and Imaging},
+    year = {2025}
+}
+
+@misc{sherbrooke3shell,
+    url = {https://digital.lib.washington.edu/researchworks/items/e4d95d19-2d3b-49bd-ae0b-27c58080116c},
+    author = {Rokem, Ariel},
+    year = {2017-03-31}
+}
+
+@article{thereticaldm,
+   title={Generative diffusion models: A survey of current theoretical developments},
+   volume={608},
+   ISSN={0925-2312},
+   url={http://dx.doi.org/10.1016/j.neucom.2024.128373},
+   DOI={10.1016/j.neucom.2024.128373},
+   journal={Neurocomputing},
+   publisher={Elsevier BV},
+   author={Yeğin, Melike Nur and Amasyalı, Mehmet Fatih},
+   year={2024},
+   month=dec, pages={128373} }
+
+@misc{jiang2025fastddpmfastdenoisingdiffusion,
+      title={Fast-DDPM: Fast Denoising Diffusion Probabilistic Models for Medical Image-to-Image Generation}, 
+      author={Hongxu Jiang and Muhammad Imran and Teng Zhang and Yuyin Zhou and Muxuan Liang and Kuang Gong and Wei Shao},
+      year={2025},
+      eprint={2405.14802},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url={https://arxiv.org/abs/2405.14802}, 
+}
+
+@INPROCEEDINGS{psnrssim,
+  author={Horé, Alain and Ziou, Djemel},
+  booktitle={2010 20th International Conference on Pattern Recognition}, 
+  title={Image Quality Metrics: PSNR vs. SSIM}, 
+  year={2010},
+  volume={},
+  number={},
+  pages={2366-2369},
+  keywords={PSNR;Degradation;Image quality;Additives;Transform coding;Sensitivity;Image coding;PSNR;SSIM;image quality metrics},
+  doi={10.1109/ICPR.2010.579}}
+
+@misc{ho2020denoisingdiffusionprobabilisticmodels,
+      title={Denoising Diffusion Probabilistic Models}, 
+      author={Jonathan Ho and Ajay Jain and Pieter Abbeel},
+      year={2020},
+      eprint={2006.11239},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2006.11239}, 
+}
+
+@incollection{mridenoisefiltering,
+author = {Hanafy M. Ali},
+title = {MRI Medical Image Denoising by Fundamental Filters},
+booktitle = {High-Resolution Neuroimaging - Basic Physical Principles and Clinical Applications},
+publisher = {IntechOpen},
+address = {London},
+year = {2018},
+editor = {Ahmet Mesrur Halefoğlu},
+chapter = {7},
+doi = {10.5772/intechopen.72427},
+url = {https://doi.org/10.5772/intechopen.72427}
+}
+
+@misc{rethinkfid,
+      title={Rethinking FID: Towards a Better Evaluation Metric for Image Generation}, 
+      author={Sadeep Jayasumana and Srikumar Ramalingam and Andreas Veit and Daniel Glasner and Ayan Chakrabarti and Sanjiv Kumar},
+      year={2024},
+      eprint={2401.09603},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2401.09603}, 
+}
+
+@inproceedings{evaluationsuitabilityinceptionscore,
+author = {Chan, Derrick Adrian and Sithungu, Siphesihle Philezwini},
+title = {Evaluating the Suitability of Inception Score and Fr\'{e}chet Inception Distance as Metrics for Quality and Diversity in Image Generation},
+year = {2025},
+isbn = {9798400717437},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3708778.3708790},
+doi = {10.1145/3708778.3708790},
+abstract = {Variational Autoencoders (VAEs) have gained popularity as one of the main approaches for generating diverse and high-quality synthetic images. This study examines the suitability of evaluation metrics, specifically Inception Score and Fr\'{e}chet Inception Distance (FID), for assessing these images. Particularly, the study focuses on the generation of synthetic images based on the MNIST handwritten digits dataset. Through the use of VAE-generated MNIST image samples, the study analyses the abovementioned metrics alongside alternative methods that can be used to assess image quality and diversity. The findings made from the study reveal the strengths and limitations of each metric in evaluating image quality and diversity. This paper underscores the need for tailored metrics to enhance the evaluation of generative models, while specifically using the performance of a VAE as the domain of investigation.},
+booktitle = {Proceedings of the 2024 7th International Conference on Computational Intelligence and Intelligent Systems},
+pages = {79–85},
+numpages = {7},
+keywords = {Fr\'{e}chet Inception Distance, Image Generation, Inception Score, MNIST, Variational Autoencoders},
+location = {
+},
+series = {CIIS '24}
+}
+
+@article{deeplearningbasedsysn,
+title = {Deep learning based synthesis of MRI, CT and PET: Review and analysis},
+journal = {Medical Image Analysis},
+volume = {92},
+pages = {103046},
+year = {2024},
+issn = {1361-8415},
+doi = {https://doi.org/10.1016/j.media.2023.103046},
+url = {https://www.sciencedirect.com/science/article/pii/S1361841523003067},
+author = {Sanuwani Dayarathna and Kh Tohidul Islam and Sergio Uribe and Guang Yang and Munawar Hayat and Zhaolin Chen},
+keywords = {Medical image synthesis, Generative deep-learning models, Pseudo-CT, Synthetic MR, Synthetic PET},
+abstract = {Medical image synthesis represents a critical area of research in clinical decision-making, aiming to overcome the challenges associated with acquiring multiple image modalities for an accurate clinical workflow. This approach proves beneficial in estimating an image of a desired modality from a given source modality among the most common medical imaging contrasts, such as Computed Tomography (CT), Magnetic Resonance Imaging (MRI), and Positron Emission Tomography (PET). However, translating between two image modalities presents difficulties due to the complex and non-linear domain mappings. Deep learning-based generative modelling has exhibited superior performance in synthetic image contrast applications compared to conventional image synthesis methods. This survey comprehensively reviews deep learning-based medical imaging translation from 2018 to 2023 on pseudo-CT, synthetic MR, and synthetic PET. We provide an overview of synthetic contrasts in medical imaging and the most frequently employed deep learning networks for medical image synthesis. Additionally, we conduct a detailed analysis of each synthesis method, focusing on their diverse model designs based on input domains and network architectures. We also analyse novel network architectures, ranging from conventional CNNs to the recent Transformer and Diffusion models. This analysis includes comparing loss functions, available datasets and anatomical regions, and image quality assessments and performance in other downstream tasks. Finally, we discuss the challenges and identify solutions within the literature, suggesting possible future directions. We hope that the insights offered in this survey paper will serve as a valuable roadmap for researchers in the field of medical image synthesis.}
+}
+
+@article{fidequation,
+title = {The Fréchet distance between multivariate normal distributions},
+journal = {Journal of Multivariate Analysis},
+volume = {12},
+number = {3},
+pages = {450-455},
+year = {1982},
+issn = {0047-259X},
+doi = {https://doi.org/10.1016/0047-259X(82)90077-X},
+url = {https://www.sciencedirect.com/science/article/pii/0047259X8290077X},
+author = {D.C Dowson and B.V Landau},
+keywords = {Fréchet distance, multivariate normal distributions, covariance matrices},
+abstract = {The Fréchet distance between two multivariate normal distributions having means μX, μY and covariance matrices ΣX, ΣY is shown to be given by d2 = |μX − μY|2 + tr(ΣX + ΣY − 2(ΣXΣY)12). The quantity d0 given by d02 = tr(ΣX + ΣY − 2(ΣXΣY)12) is a natural metric on the space of real covariance matrices of given order.}
+}
