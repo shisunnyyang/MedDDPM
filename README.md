@@ -139,7 +139,7 @@ diffusion.load_state_dict(torch.load('diffusion_model.pth'))
 - Attention-augmented U-Nets  
 - Training with larger datasets  
 
-Reference:
+## References
 @misc{ddpmgithub,
     key = {Denoising Diffusion Probabilistic Model, in Pytorch},
     url = {https://github.com/lucidrains/denoising-diffusion-pytorch/tree/main},
