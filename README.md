@@ -35,7 +35,8 @@ MRI images should be stored in:
 You may:
 
 - Upload your own dataset manually  
-- Download using KaggleHub (if configured)  
+- Download using KaggleHub (if configured)
+
 
 ### 2. Conditioning Masks
 
@@ -44,13 +45,29 @@ Dummy binary masks are generated and stored in:
 ```
 /content/drive/MyDrive/ColabNotebooks/EnhanceMRIdata/masks
 ```
-
 These masks:
 
 - Match the size `IMG_SIZE` (e.g., 128 × 128)  
 - Are placeholders for real anatomical or pathology masks  
 
 In real applications, replace dummy masks with segmentation maps (tumor masks, tissue labels, etc.).
+
+### Configuration For Importing Dataset Directly From Kaggle
+ 
+1. Visit www.kaggle.com. Go to your profile and click on Settings.
+1. Scroll to API section and Click Expire API Token to remove previous tokens.
+1. Click on Create New API Token - It will download kaggle.json file on your machine.
+1. Go to your Google Colab project file and run the following commands:
+ 
+```
+!pip install -q kaggle
+from google.colab import files
+files.upload()
+# Choose the kaggle.json file that you downloaded
+! mkdir ~/.kaggle
+! cp kaggle.json ~/.kaggle/
+! chmod 600 ~/.kaggle/kaggle.json
+```
 
 ## Model Architecture
 
