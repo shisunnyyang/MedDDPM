@@ -158,6 +158,64 @@ diffusion.load_state_dict(torch.load('diffusion_model.pth'))
 - Attention-augmented U-Nets  
 - Training with larger datasets  
 
+### **`Unet_dmsegmentation.py` - MRI Segmentation and Synthetic Image Generation**
+
+This Python script implements a comprehensive pipeline for medical image analysis, combining a U-Net for MRI brain tumor segmentation with a Denoising Diffusion Probabilistic Model (DDPM) for synthetic MRI image generation. The project leverages the `lgg-mri-segmentation` dataset to demonstrate both segmentation capabilities on real data and the potential for data augmentation through diffusion models.
+
+#### **1. Data Preparation and Preprocessing**
+*   **Dataset Loading**: The `lgg-mri-segmentation` dataset, containing MRI scans and corresponding tumor masks, is loaded. Images are in `.tif` format.
+*   **Image-Mask Pairing**: Original images are paired with their respective `_mask.tif` files, ensuring that only images with existing masks are considered.
+*   **U-Net Preprocessing**: Images and masks are resized to **256x256** pixels, converted to grayscale, and normalized for U-Net training.
+*   **Diffusion Model Preprocessing**: Original `.tif` images are converted to `.png` format and resized to **128x128** pixels, which serves as the input resolution for the DDPM. This processed dataset is stored in `./converted_lgg_mri_images_png`.
+
+#### **2. U-Net Model Implementation and Training**
+*   **Architecture**: A U-Net model is built from scratch using `tensorflow.keras.layers`, featuring convolutional blocks, max-pooling for downsampling (encoder), and transposed convolutions for upsampling (decoder).
+*   **Training**: The U-Net is trained on the preprocessed image-mask pairs from the `lgg-mri-segmentation` dataset.
+*   **Loss and Metrics**: The model is compiled with `binary_crossentropy` loss and evaluated using `accuracy`, `dice_coef`, and `iou_metric`.
+*   **Callbacks**: `ModelCheckpoint` saves the best model weights based on `val_loss`, `ReduceLROnPlateau` adjusts the learning rate, and `EarlyStopping` prevents overfitting.
+*   **Evaluation**: Key metrics (accuracy, Dice Coefficient, IoU, loss) are plotted over training epochs. After training, mean Dice, mean IoU, and mean pixel accuracy are calculated and displayed on the validation set.
+*   **Checkpoint**: The best U-Net weights are saved to `/kaggle/working/unet_lgg_checkpoint.h5`.
+
+#### **3. Denoising Diffusion Probabilistic Model (DDPM) Implementation and Training**
+*   **Model**: A DDPM is implemented using the `denoising_diffusion_pytorch` library, consisting of a `Unet` (with `channels=3` for RGB images) wrapped within a `GaussianDiffusion` framework.
+*   **Customized Accelerated Training Loop**: A custom training loop is implemented using `accelerate` and `tqdm` for efficient and monitored training. This loop includes:
+    *   **Dynamic Progress Bar**: Provides real-time updates on loss, current step, elapsed time, and estimated time remaining.
+    *   **Intermediate Checkpoints**: Model weights (EMA model) are saved to Google Drive at specified training steps: **1,000, 10,000, 20,000, 30,000, 40,000, 50,000**.
+    *   **FID Score Calculation**: At each checkpoint, a batch of 16 synthetic MRI images is generated. The Fréchet Inception Distance (FID) is calculated between these generated images and a subset of the preprocessed real images from `./converted_lgg_mri_images_png`. All FID scores are stored and printed post-training.
+    *   **Image Generation Visualization**: At each checkpoint, the 16 generated images are visually displayed, providing a qualitative assessment of the model's learning progress.
+    *   **Final Model Save**: The final trained DDPM model (EMA weights) is saved to Google Drive at `/content/drive/MyDrive/ColabNotebooks/EnhanceMRIdata/diffusion_model_final.pt`.
+
+#### **4. Integration and Evaluation of Synthetic Data**
+*   **Synthetic Image Generation**: The final trained DDPM is used to generate a batch of new synthetic MRI images.
+*   **Segmentation of Synthetic Images**: The previously trained U-Net model is loaded and utilized to predict segmentation masks on these newly generated synthetic MRI images.
+*   **Visualizations**:
+    *   **FID Score Progression**: A plot visually represents how the FID score evolved across different training steps of the diffusion model, indicating improvement in generative quality.
+    *   **Generated Images with Predicted Masks**: A selection of synthetic MRI images are displayed alongside their corresponding U-Net predicted masks, demonstrating the U-Net's ability to segment features on novel, synthetically produced data.
+    *   **Real vs. Generated Comparison**: A visual comparison is provided, displaying actual MRI images from the dataset next to generated synthetic MRI images in both **color** and **grayscale** formats, allowing for direct qualitative assessment.
+
+#### **5. Overall Assessment and Insights**
+This file showcases a complete workflow from data preparation and segmentation model training to generative model training and its application in creating synthetic data. The project provides insights into:
+*   The effectiveness of U-Net for MRI segmentation.
+*   The capability of DDPMs to generate realistic medical images.
+*   The use of FID as a metric for generative model performance over training time.
+*   The potential for using synthetic data to test and validate segmentation models.
+
+### **Key Technologies Used:**
+*   `denoising_diffusion_pytorch`
+*   `tensorflow.keras`
+*   `pytorch_fid`
+*   `PIL` (Pillow)
+*   `matplotlib`
+*   `numpy`
+*   `tqdm`
+*   `kagglehub`
+
+### **References**
+*   [Denoising Diffusion Probabilistic Model, in Pytorch](https://github.com/lucidrains/denoising-diffusion-pytorch)
+*   [Diffusion Models for Medical Image Analysis: A Comprehensive Survey](https://arxiv.org/abs/2211.07804)
+*   [Comparative Analysis of Generative Models: Enhancing Image Synthesis with VAEs, GANs, and Stable Diffusion](https://arxiv.org/abs/2408.08751)
+*   [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239)
+
 ## Citation
 ```bibtex
 @misc{ddpmgithub,
