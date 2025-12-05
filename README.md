@@ -212,12 +212,6 @@ This file showcases a complete workflow from data preparation and segmentation m
 *   `tqdm`
 *   `kagglehub`
 
-### **References**
-*   [Denoising Diffusion Probabilistic Model, in Pytorch](https://github.com/lucidrains/denoising-diffusion-pytorch)
-*   [Diffusion Models for Medical Image Analysis: A Comprehensive Survey](https://arxiv.org/abs/2211.07804)
-*   [Comparative Analysis of Generative Models: Enhancing Image Synthesis with VAEs, GANs, and Stable Diffusion](https://arxiv.org/abs/2408.08751)
-*   [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239)
-
 -------------------------------------------------------------------------------------------------------
 
 ## Citation
