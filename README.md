@@ -158,7 +158,9 @@ diffusion.load_state_dict(torch.load('diffusion_model.pth'))
 - Attention-augmented U-Nets  
 - Training with larger datasets  
 
-### **`Unet_dmsegmentation.py` - MRI Segmentation and Synthetic Image Generation**
+-------------------------------------------------------------------------------------------------------
+
+## **`Unet_dmsegmentation.py` - MRI Segmentation and Synthetic Image Generation**
 
 This Python script implements a comprehensive pipeline for medical image analysis, combining a U-Net for MRI brain tumor segmentation with a Denoising Diffusion Probabilistic Model (DDPM) for synthetic MRI image generation. The project leverages the `lgg-mri-segmentation` dataset to demonstrate both segmentation capabilities on real data and the potential for data augmentation through diffusion models.
 
