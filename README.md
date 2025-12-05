@@ -160,7 +160,7 @@ diffusion.load_state_dict(torch.load('diffusion_model.pth'))
 
 -------------------------------------------------------------------------------------------------------
 
-## **`Unet_dmsegmentation.py` - MRI Segmentation and Synthetic Image Generation**
+## **MRI Segmentation and Synthetic Image Generation - `Unet_dmsegmentation.py`**
 
 This Python script implements a comprehensive pipeline for medical image analysis, combining a U-Net for MRI brain tumor segmentation with a Denoising Diffusion Probabilistic Model (DDPM) for synthetic MRI image generation. The project leverages the `lgg-mri-segmentation` dataset to demonstrate both segmentation capabilities on real data and the potential for data augmentation through diffusion models.
 
@@ -217,6 +217,8 @@ This file showcases a complete workflow from data preparation and segmentation m
 *   [Diffusion Models for Medical Image Analysis: A Comprehensive Survey](https://arxiv.org/abs/2211.07804)
 *   [Comparative Analysis of Generative Models: Enhancing Image Synthesis with VAEs, GANs, and Stable Diffusion](https://arxiv.org/abs/2408.08751)
 *   [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239)
+
+-------------------------------------------------------------------------------------------------------
 
 ## Citation
 ```bibtex
